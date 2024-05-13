@@ -1,0 +1,297 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+
+    <div class="backgroundImage posAbsolute00 heightwidth100">
+        <img src="" alt="Book cover image" class="posAbsolute00 heightwidth100">
+    </div>
+
+    <div class="mainCont posAbsolute00 heightwidth100">
+
+        <div class="chpaterCont">
+            <div class="chapterContTitle">
+                <h2 id="chapContTitle">No Book Title 😢</h2> <!--will change once book json loads -->
+            </div>
+            <div class="chapterBtnsCont">
+                <div class="cont">
+                    <div class="chapterButtons" id="chapBtns">
+                        <!-- things will be aded automatically --> 
+                    </div>
+                </div>
+            </div>
+            <div class="mediaControls">
+                    <div class="controls">
+                        <div class="mediaButton" id="backBtn" onclick="skipSec(`-5`,this)">
+                            <div class="cont buttonBG"></div>
+                            <div class="cont">
+                                <img src="/icons/rewind-5-seconds-back-svgrepo-com.svg" alt="">
+                            </div>
+                        </div>
+
+                        <div class="mediaButton pause" id="pausePlayBtn" onclick="pausePlay(0 , 1)">
+                            <div class="cont buttonBG"></div>
+                            <div class="cont pauseImg">
+                                <img src="/icons/pause-svgrepo-com.svg" alt="">
+                            </div>
+                            <div class="cont playImg">
+                                <img src="/icons/play-svgrepo-com.svg" alt="">
+                            </div>
+                        </div>
+
+                        <div class="mediaButton" id="forwardBtn" onclick="skipSec(`5`,this)">
+                            <div class="cont buttonBG"></div>
+                            <div class="cont">
+                                <img src="/icons/rewind-5-seconds-forward-svgrepo-com.svg" alt="">
+                            </div>
+                        </div>
+                </div>
+                <h4><span style="font-weight: normal;">Nic Stone -</span> Dear Martin</h2>
+            </div>
+        </div>
+
+        <div class="videoCont">
+            <div class="cont">
+                <div id="player"></div>
+            </div>
+        </div>
+
+    </div>
+    <div></div>
+    <script>
+        //vars
+        let curentChapter;
+        let curentChapterStr;
+        let curentChapterBtn;
+        let bookTitle;
+        let numberOfChaps;
+        let chapters;
+        let curentTimes;
+        let curentYTid;
+        let timeInterval;
+        let shouldUpdatePP = 1;
+        
+        const chapterButtons = document.getElementById('chapBtns');
+        let jsonData;
+
+        //youtube stuff
+        var tag = document.createElement('script');
+        tag.src = "https://www.youtube.com/iframe_api";
+        var firstScriptTag = document.getElementsByTagName('script')[0];
+        firstScriptTag.parentNode.insertBefore(tag, firstScriptTag);
+        var player;
+
+
+        // some stack overflow answer
+        function init() {
+            fetch("dearMartin.json")
+                .then(function (resp) {
+                    return resp.json();
+                })
+                .then(data => jsonData = data)
+                .then(function (data) {
+                    console.log(data);
+                    afterLoadJson();
+                });
+                let chapterString = "chapter2";
+        }
+
+        function afterLoadJson() {
+            bookTitle = jsonData.book.bookTitle;
+            numberOfChaps = jsonData.book.chapterNum;
+            chapters = jsonData.book.chapters;
+            document.getElementById("chapContTitle").textContent = bookTitle;
+            // create the chapter buttons
+            for (let i = 1; i < (numberOfChaps + 1); i++) {
+                var chpter = document.createElement('div');
+                chpter.classList.add("chapterButton");
+                chpter.id = `chapter${i}btn`;
+                chpter.setAttribute('onclick',  `playChapter("chapter${i}", this)`);
+                chpter.setAttribute('chapterNum',  `${i}`);
+                chpter.innerHTML = `
+                        <div class="progressBar" id="chapter${i}ProgressBar"></div>
+                        <div class="cont">
+                            <h3 class="alingCenter prevent-select">Chapter ${i}</h3>
+                        </div>
+                `
+                chapterButtons.appendChild(chpter);
+                console.log(`added chapyter button`);
+            }
+
+            updateSiteTitle();
+        }
+
+        //update stuff
+        function updateSiteTitle() {
+            document.title = `${curentChapter.customTitle} - ${bookTitle} `;
+        }
+        init();
+        //scroll to view
+        function scrollIntoVew(div){
+            div.scrollIntoView({
+                behavior: 'smooth',
+                block: 'center'
+            });
+        }
+        //video stuff
+        function onYouTubeIframeAPIReady() {
+            const lastPlayingChap = localStorage.getItem('lastPlayingChap');
+            const lastPlayingTime = localStorage.getItem('lastPlayingTime');
+            curentYTid = (lastPlayingChap != null) ? jsonData.book.chapters[lastPlayingChap].ytVidID : jsonData.book.chapters.chapter1.ytVidID;
+            curentChapterStr = (lastPlayingChap != null) ?  lastPlayingChap : 'chapter1';
+            curentChapter = (lastPlayingChap != null) ? jsonData.book.chapters[lastPlayingChap] : jsonData.book.chapters.chapter1;
+            curentTimes = (lastPlayingChap != null) ? jsonData.book.chapters[lastPlayingChap].vidTiming : jsonData.book.chapters.chapter1.vidTiming;
+            curentChapterBtn = document.getElementById(`${curentChapterStr}btn`);
+
+            player = new YT.Player('player', {
+                height: '100%',
+                width: '100%',
+                videoId: curentYTid,
+                playerVars: {
+                    'playsinline': 1,
+                    'startSeconds': curentTimes[0],
+                    'endSeconds': curentTimes[1]
+                },
+                events: {
+                    onStateChange: onPlayerStateChange
+                }
+            });
+
+            if(lastPlayingChap == null) localStorage.setItem('lastPlayingChap', 'chapter1');
+            if(lastPlayingTime == null) localStorage.setItem('lastPlayingTime', jsonData.book.chapters.chapter1.vidTiming[0]);
+            if(lastPlayingChap != null){
+                scrollIntoVew(document.getElementById(`${lastPlayingChap}btn`));
+                updateBtnHighlighting();
+            }
+            updateSiteTitle();
+            createPopup(`Now playing ${curentChapter.customTitle}`);
+        }
+
+        function playChapter(chapterName, button) {
+            curentTimes = jsonData.book.chapters[chapterName].vidTiming;
+            curentChapter = jsonData.book.chapters[chapterName];
+            curentChapterStr = chapterName;
+            curentChapterBtn = button;
+            localStorage.setItem('lastPlayingChap', chapterName);
+
+            player.loadVideoById({'videoId': curentChapter.ytVidID,
+               'startSeconds': curentTimes[0],
+               'endSeconds': curentTimes[1]});
+            updateSiteTitle()
+            createPopup(`Now playing ${curentChapter.customTitle}`);
+            updateBtnHighlighting();
+        }
+        function playNextChapter(){
+            // Chat-gpt
+            let chapterNumber = parseInt(curentChapterStr.match(/\d+/)[0]);
+            chapterNumber++;
+            curentChapterStr = curentChapterStr.replace(/\d+/, chapterNumber);
+            playChapter(curentChapterStr, document.getElementById(`chapter${chapterNumber}btn`));
+            scrollIntoVew(document.getElementById(`chapter${chapterNumber}btn`))
+        }
+        player.addEventListener('onEnded', function() {
+            updateTimes();
+        });
+
+        // Video time suff
+        function onPlayerStateChange(event) {
+            if (event.data === YT.PlayerState.PLAYING) {
+                startTimeUpdate();
+                console.log("updating pasePlay for playing");
+                //if(shouldUpdatePP == 1){  }else{ shouldUpdatePP = 1;}
+                if(shouldUpdatePP == 1){ pausePlay(0 ,0); }else{ shouldUpdatePP = 1;}
+            }else if(event.data === YT.PlayerState.PAUSED){
+                console.log("updating pasePlay for paused");
+                if(shouldUpdatePP == 1){ pausePlay(1 ,0); }else{ shouldUpdatePP = 1;}
+                stopTimeUpdate();
+                
+            }
+            updateTimes()
+        }
+
+        function startTimeUpdate(){
+            timeInterval = setInterval(function () {
+                updateTimes()
+                }, 600);
+        }
+        function stopTimeUpdate(){
+            clearInterval(timeInterval);
+        }
+
+        function updateBtnHighlighting(){
+            const progressDivs = document.querySelectorAll('.progressBar');
+
+            progressDivs.forEach(div => {
+                div.style.width = null;
+                div.parentNode.style.backgroundColor  = ((parseInt(div.parentNode.getAttribute('chapterNum'))) < parseInt(curentChapterBtn.getAttribute('chapterNum'))) ? 'rgba(0, 234, 0, 0.15)' : null ;
+            });
+            document.getElementById(`${curentChapterStr}ProgressBar`).parentNode.style.background = 'rgba(255, 0, 0, 0.07)';
+        }
+        function updateTimes() {
+            const currentTime = player.getCurrentTime();
+            const progressBar = document.getElementById(`${curentChapterStr}ProgressBar`);
+            const progress = (currentTime - curentChapter.vidTiming[0]) / (curentChapter.vidTiming[0] + curentChapter.vidTiming[1]);
+            const progressDivs = document.querySelectorAll('.progressBar');
+
+            updateBtnHighlighting();
+            progressBar.style.background = null;
+            progressBar.style.width = `${progress * 100}%`;
+            if(currentTime > curentChapter.vidTiming[1] || currentTime == curentChapter.vidTiming[1]){ playNextChapter()};
+        }
+
+        //media controls
+        function pausePlay(a, b){
+            const button = document.getElementById(`pausePlayBtn`);
+            console.log("pausePlayBtn " + a);
+            shouldUpdatePP = 1;
+            if(b == 1){
+                if(a == 1){ player.pauseVideo(); }else{ player.playVideo(); }
+                shouldUpdatePP = 0;
+            }
+            button.classList.add(a == 1 ? 'pause' : 'play');
+            button.classList.remove(a == 1 ? 'play' : 'pause');
+            button.setAttribute('onclick', a == 1 ? 'pausePlay(0 , 1)' : 'pausePlay(1 , 1)');
+        }
+
+        function skipSec(time, button){
+            const currentTime = player.getCurrentTime();
+            const newTime = (parseInt(time) + currentTime);
+            player.seekTo(newTime, true);
+            console.log("time" + time);
+            console.log("newTime" + newTime)
+            button.classList.add([parseInt(time) == -5 ? 'backwardRotate' : 'forwardRotate']);
+            updateTimes();
+            setTimeout(function(){
+                button.classList.remove([parseInt(time) == -5 ? 'backwardRotate' : 'forwardRotate']);
+            }, 300); // remove after animation plays
+        }
+    </script>
+
+    <script>
+        function createPopup(text) {
+            const progressDivs = document.querySelectorAll('.popup');
+            progressDivs.forEach(div => {
+                div.style.opacity = '0';
+            });
+            let el = document.createElement('DIV');
+            el.classList.add('popup');
+            el.innerHTML = '<b style="width:100%" text-aling: center;>' + text + '</b>';
+            document.body.appendChild(el);
+
+            setTimeout(() => {
+                el.style.opacity = '0';
+                setTimeout(() => {
+                    el.remove();
+                }, 450);
+            }, 2000);
+        }
+    </script>
+
+</body>
+</html>

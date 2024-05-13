@@ -1,0 +1,155 @@
+{
+    "book": {
+        "bookTitle": "Dear Martin",
+        "chapterNum": 24,
+        "chapters": {
+            "chapter1": {
+                "vidNumber": 1,
+                "ytVidID": "lKXoQD7eFf8",
+                "vidTiming": [0, 855],
+                "customTitle": "Chapter 1"
+            },
+            "chapter2": {
+                "vidNumber": 1,
+                "ytVidID": "xhNA5d3oa7M",
+                "vidTiming": [0, 375],
+                "customTitle": "Chapter 2"
+            },
+            "chapter3": {
+                "vidNumber": 1,
+                "ytVidID": "LX5inunKRFc",
+                "vidTiming": [0, 840],
+                "customTitle": "Chapter 3"
+            },
+            "chapter4": {
+                "vidNumber": 1,
+                "ytVidID": "u3BFOxC6LUc",
+                "vidTiming": [0, 605],
+                "customTitle": "Chapter 4"
+            },
+            "chapter5": {
+                "vidNumber": 1,
+                "ytVidID": "6r-1xyIOONk",
+                "vidTiming": [0, 980],
+                "customTitle": "Chapter 5"
+            },
+            "chapter6": {
+                "vidNumber": 1,
+                "ytVidID": "fC_iQg3Q9do",
+                "vidTiming": [0, 398],
+                "customTitle": "Chapter 6"
+            },
+            "chapter7": {
+                "vidNumber": 2,
+                "ytVidID": "38YJJjZ0tZI",
+                "vidTiming": [0, 681],
+                "ytVidID2": "nZJpRo27cuo",
+                "vidTiming2": [0, 39],
+                "customTitle": "Chapter 7"
+            },
+            "chapter8": {
+                "vidNumber": 1,
+                "ytVidID": "bMdRX-coIko",
+                "vidTiming": [0, 494],
+                "customTitle": "Chapter 8"
+            },
+            "chapter9": {
+                "vidNumber": 1,
+                "ytVidID": "kqXn2zJIIBw",
+                "vidTiming": [0, 770],
+                "customTitle": "Chapter 9"
+            },
+            "chapter10": {
+                "vidNumber": 1,
+                "ytVidID": "vYouALkiGrg",
+                "vidTiming": [0, 882],
+                "customTitle": "Chapter 10"
+            },
+            "chapter11": {
+                "vidNumber": 1,
+                "ytVidID": "GxBCWUEeMFE",
+                "vidTiming": [0, 613],
+                "customTitle": "Chapter 11"
+            },
+            "chapter12": {
+                "vidNumber": 1,
+                "ytVidID": "uwDMNbexerE",
+                "vidTiming": [0, 645],
+                "customTitle": "Chapter 12"
+            },
+            "chapter13": {
+                "vidNumber": 1,
+                "ytVidID": "VDve4QuHvc8",
+                "vidTiming": [0, 294],
+                "customTitle": "Chapter 13"
+            },
+            "chapter14": {
+                "vidNumber": 1,
+                "ytVidID": "KOmuhdwQq7w",
+                "vidTiming": [0, 77],
+                "customTitle": "Chapter 14"
+            },
+            "chapter15": {
+                "vidNumber": 1,
+                "ytVidID": "zQzopVXn9oA",
+                "vidTiming": [0, 542],
+                "customTitle": "Chapter 15"
+            },
+            "chapter16": {
+                "vidNumber": 1,
+                "ytVidID": "OrAQPjnz_CA",
+                "vidTiming": [0, 479],
+                "customTitle": "Chapter 16"
+            },
+            "chapter17": {
+                "vidNumber": 1,
+                "ytVidID": "k0MTnmKFY1Q",
+                "vidTiming": [0, 727],
+                "customTitle": "Chapter 17"
+            },
+            "chapter18": {
+                "vidNumber": 1,
+                "ytVidID": "UxzdumsQPBQ",
+                "vidTiming": [0, 732],
+                "customTitle": "Chapter 18"
+            },
+            "chapter19": {
+                "vidNumber": 1,
+                "ytVidID": "ICQTJA6uPfk",
+                "vidTiming": [0, 766],
+                "customTitle": "Chapter 19"
+            },
+            "chapter20": {
+                "vidNumber": 1,
+                "ytVidID": "obqNRBWvPhs",
+                "vidTiming": [0, 703],
+                "customTitle": "Chapter 20"
+            },
+            "chapter21": {
+                "vidNumber": 1,
+                "ytVidID": "cTicEJtxh5M",
+                "vidTiming": [0, 710],
+                "customTitle": "Chapter 21"
+            },
+            "chapter22": {
+                "vidNumber": 1,
+                "ytVidID": "oOKjR2szze8",
+                "vidTiming": [0, 760],
+                "customTitle": "Chapter 22"
+            },
+            "chapter23": {
+                "vidNumber": 1,
+                "ytVidID": "YfvBrHFBgPI",
+                "vidTiming": [0, 668],
+                "customTitle": "Chapter 23"
+            },
+            "chapter24": {
+                "vidNumber": 1,
+                "ytVidID": "YfvBrHFBgPI",
+                "vidTiming": [0, 668],
+                "customTitle": "4 Months Later"
+            },
+            "country": "USA"
+        }
+    }
+}
