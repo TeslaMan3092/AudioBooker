@@ -134,19 +134,19 @@
             "chapter22": {
                 "vidNumber": 1,
                 "ytVidID": "oOKjR2szze8",
-                "vidTiming": [0, 760],
+                "vidTiming": [0, 820],
                 "customTitle": "Chapter 22"
             },
             "chapter23": {
                 "vidNumber": 1,
                 "ytVidID": "YfvBrHFBgPI",
-                "vidTiming": [0, 668],
+                "vidTiming": [0, 687 ],
                 "customTitle": "Chapter 23"
             },
             "chapter24": {
                 "vidNumber": 1,
                 "ytVidID": "YfvBrHFBgPI",
-                "vidTiming": [0, 668],
+                "vidTiming": [688, 973],
                 "customTitle": "4 Months Later"
             },
             "country": "USA"

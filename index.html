@@ -10,14 +10,15 @@
 <body>
 
     <div class="backgroundImage posAbsolute00 heightwidth100">
-        <img src="" alt="Book cover image" class="posAbsolute00 heightwidth100">
+        <img src="/imgs/dear-martin-9781471175565_hr-900x600.webp" alt="Book cover image" class="posAbsolute00 heightwidth100">
+        <div class="posAbsolute00 heightwidth100"></div>
     </div>
 
     <div class="mainCont posAbsolute00 heightwidth100">
 
         <div class="chpaterCont">
             <div class="chapterContTitle">
-                <h2 id="chapContTitle">No Book Title 😢</h2> <!--will change once book json loads -->
+                <h2 id="chapContTitle">No Book Title</h2> <!--will change once book json loads -->
             </div>
             <div class="chapterBtnsCont">
                 <div class="cont">
@@ -99,7 +100,6 @@
                     console.log(data);
                     afterLoadJson();
                 });
-                let chapterString = "chapter2";
         }
 
         function afterLoadJson() {
@@ -236,19 +236,23 @@
         function updateTimes() {
             const currentTime = player.getCurrentTime();
             const progressBar = document.getElementById(`${curentChapterStr}ProgressBar`);
-            const progress = (currentTime - curentChapter.vidTiming[0]) / (curentChapter.vidTiming[0] + curentChapter.vidTiming[1]);
+            const progress = (currentTime - curentChapter.vidTiming[0]) / (curentChapter.vidTiming[1] - curentChapter.vidTiming[0]) * 100;
+            // console.log(progress);
+            // console.log("(currentTime - curentChapter.vidTiming[0]) : " + (currentTime - curentChapter.vidTiming[0]));
+            // console.log("(curentChapter.vidTiming[1] - curentChapter.vidTiming[0])" + (curentChapter.vidTiming[1] - curentChapter.vidTiming[0]));
             const progressDivs = document.querySelectorAll('.progressBar');
 
             updateBtnHighlighting();
             progressBar.style.background = null;
-            progressBar.style.width = `${progress * 100}%`;
+            progressBar.style.width = `${progress}%`;
             if(currentTime > curentChapter.vidTiming[1] || currentTime == curentChapter.vidTiming[1]){ playNextChapter()};
+            if(currentTime < curentChapter.vidTiming[0]) player.seekTo(curentChapter.vidTiming[0], true);
         }
 
         //media controls
         function pausePlay(a, b){
             const button = document.getElementById(`pausePlayBtn`);
-            console.log("pausePlayBtn " + a);
+            // console.log("pausePlayBtn " + a);
             shouldUpdatePP = 1;
             if(b == 1){
                 if(a == 1){ player.pauseVideo(); }else{ player.playVideo(); }
@@ -263,13 +267,13 @@
             const currentTime = player.getCurrentTime();
             const newTime = (parseInt(time) + currentTime);
             player.seekTo(newTime, true);
-            console.log("time" + time);
-            console.log("newTime" + newTime)
+            // console.log("time" + time);
+            // console.log("newTime" + newTime)
             button.classList.add([parseInt(time) == -5 ? 'backwardRotate' : 'forwardRotate']);
             updateTimes();
             setTimeout(function(){
                 button.classList.remove([parseInt(time) == -5 ? 'backwardRotate' : 'forwardRotate']);
-            }, 300); // remove after animation plays
+            }, 300); 
         }
     </script>
 

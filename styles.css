@@ -39,9 +39,13 @@ h1, h2, h3, h4, h5, h6{
     display: block;
 }
 .backgroundImage img{
-    filter: blur(40px);
-    -webkit-filter: blur(40px);
-    object-fit: fill;
+    filter: blur(20px);
+    -webkit-filter: blur(20px);
+
+    object-fit: cover;
+}
+.backgroundImage div{
+    background-color: rgba(0, 0, 0, 0.62);
 }
 
 .cont{
@@ -72,7 +76,7 @@ h1, h2, h3, h4, h5, h6{
     height: 100%;
     position: relative;
     display: flex;
-    flex-direction: column;
+    flex-direction: column;align-items: center;
     /* overflow: auto; */
 }
 
@@ -150,14 +154,23 @@ backdrop-filter: blur(11px);
         opacity: 1;
     }
 }
-.chapterButton:hover{
-    transform: scale(1.07);
-    -webkit-box-shadow: 0px 0px 19px 11px rgba(0,0,0,0.3);
--moz-box-shadow: 0px 0px 19px 11px rgba(0,0,0,0.3);
-box-shadow: 0px 0px 19px 11px rgba(0, 0, 0, 0.3);
-}
-.chapterButton:active{
-    transform: scale(0.95);
+@media (hover : hover) {
+    .chapterButton:hover{
+        transform: scale(1.07);
+        -webkit-box-shadow: 0px 0px 19px 11px rgba(0,0,0,0.3);
+        -moz-box-shadow: 0px 0px 19px 11px rgba(0,0,0,0.3);
+        box-shadow: 0px 0px 19px 11px rgba(0, 0, 0, 0.3);
+    }
+    .chapterButton:active{
+        transform: scale(0.95);
+    }
+    .mediaButton:hover .buttonBG{
+        background-color: rgba(255, 255, 255, 0.146);
+        transform: scale(1.2);
+    }
+    .mediaButton:hover img{
+        transform: scale(1.05);
+    }
 }
 
 /* media controls */
@@ -182,7 +195,7 @@ box-shadow: 0px 0px 19px 11px rgba(0, 0, 0, 0.3);
     justify-content: space-evenly;
     height: 40px;
     max-width: 275px;
-    width: 100%;
+    width: calc(100% - 20px);
     padding: 10px;
     background: rgba(255, 255, 255, 0.12);
     backdrop-filter: blur(11px);
@@ -200,9 +213,6 @@ box-shadow: 0px 0px 19px 11px rgba(0, 0, 0, 0.3);
     height: 100%;
     width: 100%;
     transition: all ease 0.35s;
-}
-.mediaButton:hover img{
-    transform: scale(1.05);
 }
 
 .play .pauseImg{
@@ -273,10 +283,7 @@ box-shadow: 0px 0px 19px 11px rgba(0, 0, 0, 0.3);
     transition: all ease 0.3s;
     transform: scale(0.9);
 }
-.mediaButton:hover .buttonBG{
-    background-color: rgba(255, 255, 255, 0.146);
-    transform: scale(1.2);
-}
+
 
 .forwardRotate{
     animation: forwardRotate 0.3s;
@@ -309,7 +316,6 @@ box-shadow: 0px 0px 19px 11px rgba(0, 0, 0, 0.3);
     height: 100%;
 }
 
-
 .progressBar{
     position: absolute;
     top: 0;
@@ -322,8 +328,39 @@ box-shadow: 0px 0px 19px 11px rgba(0, 0, 0, 0.3);
     transition: all ease 0.3s;
 }
 
-
-
+/* mobile/smallscreen stuff */
+@media (max-width: 700px) {
+    .mainCont{
+        flex-direction: column !important;
+    }
+    .chpaterCont{
+        height: 80% !important;
+        width: 100% !important;
+    }
+    .videoCont{
+        height: 20% !important;
+        width: 100% !important;
+    }
+    .chapterBtnsCont{
+        height: calc(100% - 140px) !important;
+        top: 60px !important;
+    }
+    .mediaControls{
+        top: calc(100% - 80px) !important;
+        height: 80px !important;
+        
+    }
+    .mediaControls h4{
+        display: none;
+        height: 0px;
+    }
+    .chapterContTitle{
+        height: 60px !important;
+    }
+    .chapterContTitle h2{
+        margin: 0;
+    }
+}
 
 
 .notify {
