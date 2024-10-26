@@ -2,6 +2,9 @@
     "book": {
         "bookTitle": "Dear Martin",
         "chapterNum": 24,
+        "author": "Nic Stone",
+        "bgImage": "/imgs/dear-martin-9781471175565_hr-900x600.webp",
+        "coverIMG": "/imgs/dearMartinCover.webp",
         "chapters": {
             "chapter1": {
                 "vidNumber": 1,
@@ -148,8 +151,7 @@
                 "ytVidID": "YfvBrHFBgPI",
                 "vidTiming": [688, 973],
                 "customTitle": "4 Months Later"
-            },
-            "country": "USA"
+            }
         }
     }
 }

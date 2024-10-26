@@ -1,0 +1,281 @@
+{
+    "book": {
+        "bookTitle": "The House on Mango Street",
+        "author": "Sandra Cisneros",
+        "chapterNum": 45,
+        "bgImage": "/imgs/THOMS.webp",
+        "coverIMG": "/imgs/THOMS.webp",
+        "chapters": {
+            "chapter1": {
+                "vidNumber": 1,
+                "ytVidID": "G8aAbFU6xyU",
+                "vidTiming": [13, 1795],
+                "customTitle": "Introduction"
+            },
+            "chapter2": {
+                "vidNumber": 1,
+                "ytVidID": "dsktGVj0Rik",
+                "vidTiming": [0, 204],
+                "customTitle": "Ch1 - The House on Mango Street"
+            },
+            "chapter3": {
+                "vidNumber": 1,
+                "ytVidID": "dsktGVj0Rik",
+                "vidTiming": [205, 257],
+                "customTitle": "Ch2 - Hairs"
+            },
+            "chapter4": {
+                "vidNumber": 1,
+                "ytVidID": "dsktGVj0Rik",
+                "vidTiming": [258, 311],
+                "customTitle": "Ch3 - Boys & Girls"
+            },
+            "chapter5": {
+                "vidNumber": 1,
+                "ytVidID": "dsktGVj0Rik",
+                "vidTiming": [311, 429],
+                "customTitle": "Ch4 - My Name"
+            },
+            "chapter6": {
+                "vidNumber": 1,
+                "ytVidID": "TRqOoI1CcI4",
+                "vidTiming": [2, 101],
+                "customTitle": "Ch5 - Cathy Queen of Cats"
+            },
+            "chapter7": {
+                "vidNumber": 1,
+                "ytVidID": "TRqOoI1CcI4",
+                "vidTiming": [101, 291],
+                "customTitle": "Ch6 - Our Good Day"
+            },
+            "chapter8": {
+                "vidNumber": 1,
+                "ytVidID": "TRqOoI1CcI4",
+                "vidTiming": [291, 351],
+                "customTitle": "Ch7 - Laughter"
+            },
+            "chapter9": {
+                "vidNumber": 1,
+                "ytVidID": "TRqOoI1CcI4",
+                "vidTiming": [351, 420],
+                "customTitle": "Ch8 - Gil's Furniture Bought & Sold"
+            },
+            "chapter10": {
+                "vidNumber": 1,
+                "ytVidID": "TRqOoI1CcI4",
+                "vidTiming": [420, 593],
+                "customTitle": "Ch9 - Meme Ortiz"
+            },
+            "chapter11": {
+                "vidNumber": 1,
+                "ytVidID": "TRqOoI1CcI4",
+                "vidTiming": [593, 745],
+                "customTitle": "Ch10 - Louie, His Cousin & His Other Cousin"
+            },
+            "chapter12": {
+                "vidNumber": 1,
+                "ytVidID": "B6ir8IPszdA",
+                "vidTiming": [0, 117],
+                "customTitle": "Ch11 - Marin"
+            },
+            "chapter13": {
+                "vidNumber": 1,
+                "ytVidID": "B6ir8IPszdA",
+                "vidTiming": [118, 168],
+                "customTitle": "Ch12 - Those Who Don't"
+            },
+            "chapter14": {
+                "vidNumber": 1,
+                "ytVidID": "B6ir8IPszdA",
+                "vidTiming": [170, 259],
+                "customTitle": "Ch13 - There Was an Old Woman She Had So Many Children She Didn't Know What to Do"
+            },
+            "chapter15": {
+                "vidNumber": 1,
+                "ytVidID": "B6ir8IPszdA",
+                "vidTiming": [261, 322],
+                "customTitle": "Ch14 - Alicia Who Sees Mice"
+            },
+            "chapter16": {
+                "vidNumber": 1,
+                "ytVidID": "B6ir8IPszdA",
+                "vidTiming": [323, 391],
+                "customTitle": "Ch15 - Darius & the Clouds"
+            },
+            "chapter17": {
+                "vidNumber": 1,
+                "ytVidID": "B6ir8IPszdA",
+                "vidTiming": [392, 669],
+                "customTitle": "Ch16 - And Some More"
+            },
+            "chapter18": {
+                "vidNumber": 1,
+                "ytVidID": "7jw9-rIquBg",
+                "vidTiming": [0, 307],
+                "customTitle": "Ch17 - The Family of Little Feet"
+            },
+            "chapter19": {
+                "vidNumber": 1,
+                "ytVidID": "7jw9-rIquBg",
+                "vidTiming": [307, 552],
+                "customTitle": "Ch18 - A Rice Sandwich"
+            },
+            "chapter20": {
+                "vidNumber": 1,
+                "ytVidID": "7jw9-rIquBg",
+                "vidTiming": [553, 732],
+                "customTitle": "Ch19 - Chanclas"
+            },
+            "chapter21": {
+                "vidNumber": 1,
+                "ytVidID": "7jw9-rIquBg",
+                "vidTiming": [732, 1057],
+                "customTitle": "Ch20 - Hips"
+            },
+            "chapter22": {
+                "vidNumber": 1,
+                "ytVidID": "7jw9-rIquBg",
+                "vidTiming": [1058, 1229],
+                "customTitle": "Ch21 - The First Job"
+            },
+            "chapter23": {
+                "vidNumber": 1,
+                "ytVidID": "Yy066T-it9g",
+                "vidTiming": [5, 78],
+                "customTitle": "Ch22 - Papa Who Wakes Up Tired in the Dark"
+            },
+            "chapter24": {
+                "vidNumber": 1,
+                "ytVidID": "Yy066T-it9g",
+                "vidTiming": [78, 432],
+                "customTitle": "Ch23 - Born Bad"
+            },
+            "chapter25": {
+                "vidNumber": 1,
+                "ytVidID": "Yy066T-it9g",
+                "vidTiming": [432, 668],
+                "customTitle": "Ch24 - Elenita, Cards, Palm, Water"
+            },
+            "chapter26": {
+                "vidNumber": 1,
+                "ytVidID": "Yy066T-it9g",
+                "vidTiming": [668, 808],
+                "customTitle": "Ch25 - Geraldo No Last Name"
+            },
+            "chapter27": {
+                "vidNumber": 1,
+                "ytVidID": "Yy066T-it9g",
+                "vidTiming": [808, 1021],
+                "customTitle": "Ch26 - Edna's Ruthie"
+            },
+            "chapter28": {
+                "vidNumber": 1,
+                "ytVidID": "Yy066T-it9g",
+                "vidTiming": [1021, 1157],
+                "customTitle": "Ch27 - The Earl of Tennessee"
+            },
+            "chapter29": {
+                "vidNumber": 1,
+                "ytVidID": "Yy066T-it9g",
+                "vidTiming": [1158, 1315],
+                "customTitle": "Ch28 - Sire"
+            },
+            "chapter30": {
+                "vidNumber": 1,
+                "ytVidID": "KYqOVZONIWU",
+                "vidTiming": [4, 74],
+                "customTitle": "Ch29 - Four Skinny Trees"
+            },
+            "chapter31": {
+                "vidNumber": 1,
+                "ytVidID": "KYqOVZONIWU",
+                "vidTiming": [75, 330],
+                "customTitle": "Ch30 - No Speak English"
+            },
+            "chapter32": {
+                "vidNumber": 1,
+                "ytVidID": "KYqOVZONIWU",
+                "vidTiming": [330, 355],
+                "customTitle": "Ch31 - Rafaela Who Drinks Coconut & Papaya Juice on Tuesdays"
+            },
+            "chapter33": {
+                "vidNumber": 1,
+                "ytVidID": "KYqOVZONIWU",
+                "vidTiming": [356, 543],
+                "customTitle": "Ch32 - Sally"
+            },
+            "chapter34": {
+                "vidNumber": 1,
+                "ytVidID": "KYqOVZONIWU",
+                "vidTiming": [543, 612],
+                "customTitle": "Ch33 - Minerva Writes Poems"
+            },
+            "chapter35": {
+                "vidNumber": 1,
+                "ytVidID": "KYqOVZONIWU",
+                "vidTiming": [613, 648],
+                "customTitle": "Ch34 - Bums in the Attic"
+            },
+            "chapter36": {
+                "vidNumber": 1,
+                "ytVidID": "WkfZTqoVTqg",
+                "vidTiming": [3, 60],
+                "customTitle": "Ch35 - Beautiful & Cruel"
+            },
+            "chapter37": {
+                "vidNumber": 1,
+                "ytVidID": "WkfZTqoVTqg",
+                "vidTiming": [61, 147],
+                "customTitle": "Ch36 - A Smart Cookie"
+            },
+            "chapter38": {
+                "vidNumber": 1,
+                "ytVidID": "WkfZTqoVTqg",
+                "vidTiming": [147, 235],
+                "customTitle": "Ch37 - What Sally Said"
+            },
+            "chapter39": {
+                "vidNumber": 1,
+                "ytVidID": "WkfZTqoVTqg",
+                "vidTiming": [235, 623],
+                "customTitle": "Ch38 - The Monkey Garden"
+            },
+            "chapter40": {
+                "vidNumber": 1,
+                "ytVidID": "WkfZTqoVTqg",
+                "vidTiming": [623, 740],
+                "customTitle": "Ch39 - Red Clowns"
+            },
+            "chapter41": {
+                "vidNumber": 1,
+                "ytVidID": "WkfZTqoVTqg",
+                "vidTiming": [740, 810],
+                "customTitle": "Ch40 - Linoleum Roses"
+            },
+            "chapter42": {
+                "vidNumber": 1,
+                "ytVidID": "c8nfg-vSCmg",
+                "vidTiming": [3, 221],
+                "customTitle": "Ch41 - The Three Sisters"
+            },
+            "chapter43": {
+                "vidNumber": 1,
+                "ytVidID": "c8nfg-vSCmg",
+                "vidTiming": [221, 287],
+                "customTitle": "Ch42 - Alicia & I Talking on Edna's Steps"
+            },
+            "chapter44": {
+                "vidNumber": 1,
+                "ytVidID": "c8nfg-vSCmg",
+                "vidTiming": [287, 317],
+                "customTitle": "Ch43 - A House of My Own"
+            },
+            "chapter45": {
+                "vidNumber": 1,
+                "ytVidID": "c8nfg-vSCmg",
+                "vidTiming": [318, 360],
+                "customTitle": "Ch44 - Mango Says Goodbye Sometimes"
+            }
+        }
+    }
+}
