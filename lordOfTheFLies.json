@@ -1,0 +1,83 @@
+{
+    "book": {
+        "bookTitle": "Lord Of The Flies",
+        "author": "William Golding",
+        "chapterNum": 12,
+        "bgImage": "/imgs/LOTF-bookCover.jpg",
+        "coverIMG": "/imgs/LOTF-bookCover.jpg",
+        "chapters": {
+            "chapter1": {
+                "vidNumber": 1,
+                "ytVidID": "ks-3jawbyzA",
+                "vidTiming": [0, 2813],
+                "customTitle": "Chapter 1"
+            },
+            "chapter2": {
+                "vidNumber": 1,
+                "ytVidID": "ks-3jawbyzA",
+                "vidTiming": [2813, 4495],
+                "customTitle": "Chapter 2"
+            },
+            "chapter3": {
+                "vidNumber": 1,
+                "ytVidID": "ks-3jawbyzA",
+                "vidTiming": [4495, 5597],
+                "customTitle": "Chapter 3"
+            },
+            "chapter4": {
+                "vidNumber": 1,
+                "ytVidID": "ks-3jawbyzA",
+                "vidTiming": [5597, 7735],
+                "customTitle": "Chapter 4"
+            },
+            "chapter5": {
+                "vidNumber": 1,
+                "ytVidID": "ks-3jawbyzA",
+                "vidTiming": [7735, 9833],
+                "customTitle": "Chapter 5"
+            },
+            "chapter6": {
+                "vidNumber": 1,
+                "ytVidID": "ks-3jawbyzA",
+                "vidTiming": [9833, 11320],
+                "customTitle": "Chapter 6"
+            },
+            "chapter7": {
+                "vidNumber": 1,
+                "ytVidID": "ks-3jawbyzA",
+                "vidTiming": [11320, 12987],
+                "customTitle": "Chapter 7"
+            },
+            "chapter8": {
+                "vidNumber": 1,
+                "ytVidID": "ks-3jawbyzA",
+                "vidTiming": [12987, 15332],
+                "customTitle": "Chapter 8"
+            },
+            "chapter9": {
+                "vidNumber": 1,
+                "ytVidID": "ks-3jawbyzA",
+                "vidTiming": [15332, 16614],
+                "customTitle": "Chapter 9"
+            },
+            "chapter10": {
+                "vidNumber": 1,
+                "ytVidID": "ks-3jawbyzA",
+                "vidTiming": [16614, 18067],
+                "customTitle": "Chapter 10"
+            },
+            "chapter11": {
+                "vidNumber": 1,
+                "ytVidID": "ks-3jawbyzA",
+                "vidTiming": [18067, 19607],
+                "customTitle": "Chapter 11"
+            },
+            "chapter12": {
+                "vidNumber": 1,
+                "ytVidID": "ks-3jawbyzA",
+                "vidTiming": [19607, 21999],
+                "customTitle": "Chapter 12"
+            }
+        }
+    }
+}
