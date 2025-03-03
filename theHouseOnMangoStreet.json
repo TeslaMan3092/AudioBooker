@@ -3,8 +3,8 @@
         "bookTitle": "The House on Mango Street",
         "author": "Sandra Cisneros",
         "chapterNum": 45,
-        "bgImage": "/imgs/THOMS.webp",
-        "coverIMG": "/imgs/THOMS.webp",
+        "bgImage": "imgs/THOMS.webp",
+        "coverIMG": "imgs/THOMS.webp",
         "chapters": {
             "chapter1": {
                 "vidNumber": 1,

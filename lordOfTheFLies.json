@@ -3,8 +3,8 @@
         "bookTitle": "Lord Of The Flies",
         "author": "William Golding",
         "chapterNum": 12,
-        "bgImage": "/imgs/LOTF-bookCover.jpg",
-        "coverIMG": "/imgs/LOTF-bookCover.jpg",
+        "bgImage": "imgs/LOTF-bookCover.jpg",
+        "coverIMG": "imgs/LOTF-bookCover.jpg",
         "chapters": {
             "chapter1": {
                 "vidNumber": 1,
